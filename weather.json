@@ -1,0 +1,47 @@
+{
+	"coord": {
+		"lon": 30.5167,
+		"lat": 50.4333
+	},
+	"weather": [
+		{
+			"id": 500,
+			"main": "Rain",
+			"description": "light rain",
+			"icon": "10n"
+		}
+	],
+	"base": "stations",
+	"main": {
+		"temp": 284.89,
+		"feels_like": 284.44,
+		"temp_min": 283.47,
+		"temp_max": 286.29,
+		"pressure": 988,
+		"humidity": 89
+	},
+	"visibility": 10000,
+	"wind": {
+		"speed": 0.45,
+		"deg": 249,
+		"gust": 0.89
+	},
+	"rain": {
+		"1h": 0.92
+	},
+	"clouds": {
+		"all": 100
+	},
+	"dt": 1698355082,
+	"sys": {
+		"type": 2,
+		"id": 2003742,
+		"country": "UA",
+		"sunrise": 1698381552,
+		"sunset": 1698417855
+	},
+	"timezone": 10800,
+	"id": 703448,
+	"name": "Kyiv",
+	"cod": 200
+}
