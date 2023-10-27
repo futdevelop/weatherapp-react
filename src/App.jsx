@@ -6,20 +6,17 @@ function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
 
-  const API_KEY = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=77baebbe4005f490e0945cb83778aa92`;
+  const API_KEY = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=77baebbe4005f490e0945cb83778aa92`;
 
   const searchLocation = (e) => {
     if(e.key === 'Enter') {
       axios.get(API_KEY)
         .then(res => {
           setData(res.data)
-          console.log(res.data)
         })      
         setLocation('')
     }
   }
-  // const temp = (data.main.temp - 273.15).toFixed(0)
-
   return (
     <div className='app'>
     <div className="search">
@@ -36,7 +33,7 @@ function App() {
             <p>{data.name}</p>
           </div>
           <div className='temp'>   
-            {data.main ? <h1>{(data.main.temp - 273.15).toFixed()}°C</h1> : null}
+            {data.main ? <h1>{Math.round(data.main.temp)}°C</h1> : null}
           </div>
           <div className="description">
             {data.weather ? <p>{data.weather[0].main}</p> : null}
