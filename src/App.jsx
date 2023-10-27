@@ -17,6 +17,7 @@ function App() {
         setLocation('')
     }
   }
+  
   return (
     <div className='app'>
     <div className="search">
@@ -42,7 +43,7 @@ function App() {
         {data.name !== undefined &&
           <div className="bottom">
             <div className="feels">
-              {data.main ? <p className='bold'>{(data.main.feels_like - 273.15).toFixed()} °C</p> : null}
+              {data.main ? <p className='bold'>{data.main.feels_like} °C</p> : null}
               <p>Feels like</p>
             </div>
             <div className="humidity">
